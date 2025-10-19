@@ -1,0 +1,88 @@
+:root{
+  --bg:#fff7fb;
+  --card:#ffffff;
+  --accent:#ff6b9a;
+  --muted:#666;
+}
+
+{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #fff7fb 0%, #fff3ec 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.container{max-width:720px; width:100%}
+.card{
+  background:var(--card);
+  border-radius:18px;
+  padding:28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align:center;
+  position:relative;
+  overflow:visible;
+}
+
+.title{
+  margin:0;
+  font-size:2.2rem;
+  color: #3b1b2b;
+  letter-spacing:0.5px;
+}
+.subtitle{
+  margin:10px 0 18px 0;
+  color:var(--muted);
+}
+
+.flower-row{display:flex;gap:14px;justify-content:center;margin-bottom:18px}
+.flower{font-size:1.6rem;transform-origin:center;animation:bloom 4s ease-in-out infinite}
+@keyframes bloom{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-8px) scale(1.12)}
+}
+
+.btn{
+  background: linear-gradient(90deg,var(--accent), #ff8fb3);
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .14s ease;
+}
+.btn:active{transform:scale(.98)}
+.btn.small{padding:8px 12px;font-size:.95rem;margin-left:8px}
+
+.message{margin-top:16px;display:flex;gap:8px;align-items:center;justify-content:center}
+.message input{
+  padding:8px 10px;border-radius:8px;border:1px solid #eee;min-width:180px;
+}
+
+.toast{
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:26px;
+  background:#222;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:8px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease, transform .25s ease;
+}
+
+.toast.show{opacity:1;transform:translateX(-50%) translateY(-6px);pointer-events:auto}
+
+/ responsive */
+@media (max-width:480px){
+  .title{font-size:1.6rem}
+  .card{padding:18px;border-radius:14px}
+}
+sty
