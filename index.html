@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chúc mừng 20/10</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1 class="title">Chúc mừng 20/10 🎉</h1>
+      <p class="subtitle">Chúc các chị/em luôn xinh tươi — hạnh phúc và thành công!</p>
+      <div class="flower-row" aria-hidden="true">
+        <div class="flower">🌸</div>
+        <div class="flower">🌺</div>
+        <div class="flower">🌷</div>
+      </div>
+
+      <button id="wishBtn" class="btn">Gửi lời chúc</button>
+      <div id="message" class="message" hidden>
+        <p>Gửi lời chúc đến người bạn yêu quý ❤️</p>
+        <input id="nameInput" placeholder="Tên người nhận (ví dụ: Mẹ / Linh)"/>
+        <button id="sendBtn" class="btn small">Gửi</button>
+      </div>
+
+      <div id="toast" class="toast" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <canvas id="confetti"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
